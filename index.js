@@ -12,13 +12,21 @@ const compCalc = (var1, var2) =>{
 const names = () => {
     let var1 = prompt("Enter name 1: ")
     let var2 = prompt("Enter name 2: ")
-    compCalc(var1, var2)
+    if (var1 && var2){
+        compCalc(var1, var2)  
+    }else{
+        scoreEl.textContent = "Error: Invalid Input"
+    }
 }
 
 const birthMonth = () => {
     let var1 = prompt("Enter birthmonth 1: ")
     let var2 = prompt("Enter birthmonth 2: ")
-    compCalc(var1, var2)
+    if (var1 && var2){
+        compCalc(var1, var2)  
+    }else{
+        scoreEl.textContent = "Error: Invalid Input"
+    }
 }
 
 const starSign = () =>{
@@ -459,6 +467,8 @@ const starSign = () =>{
         case "piscespisces":
             scoreEl.textContent = "92%";
             break;
+        default:
+            scoreEl.textContent = "Error: Invalid Star Sign Input"
     }
 }
 
